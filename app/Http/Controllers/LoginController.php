@@ -17,7 +17,7 @@ class LoginController extends Controller
                     break;
 
                 case '2':
-                    return redirect()->intended('pembelian');
+                    return redirect()->intended('transaksi');
                     break;
             }
         }
@@ -40,7 +40,7 @@ class LoginController extends Controller
                     break;
 
                 case '2':
-                    return redirect()->intended('pembelian');
+                    return redirect()->intended('transaksi');
                     break;
             }
             return redirect()->intended('/');

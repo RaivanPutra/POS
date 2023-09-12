@@ -6,6 +6,7 @@ use App\Models\Barang;
 use App\Http\Requests\StoreBarangRequest;
 use App\Http\Requests\UpdateBarangRequest;
 use App\Models\Produk;
+use App\Models\User;
 use Exception;
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\DB;
@@ -24,6 +25,7 @@ class BarangController extends Controller
         try {
             $data['barang'] = Barang::orderBy('created_at', 'DESC')->get();
             $data['produk'] = Produk::orderBy('created_at', 'DESC')->get();
+            $data['user'] = User::orderBy('created_at', 'DESC')->get();
 
             return view('barang.index', ['title' => 'Barang'], compact('produk'))->with($data);
         } catch (QueryException | Exception | PDOException $error) {

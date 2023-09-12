@@ -22,7 +22,10 @@
                         <tbody>
                             @foreach ($barang as $b)
                                 <tr>
-                                    <td>{{ $i = !isset($i) ? ($i = 1) : ++$i }}</td>
+                                    <td>{{ $i = !isset($i) ? ($i = 1) : ++$i }}
+                                        <input type="hidden" class="idBarang" name="idBarang"
+                                            value="{{ $b->id }}">
+                                    </td>
                                     <td>{{ $b->kode_barang }}</td>
                                     <td>{{ $b->nama_barang }}</td>
                                     <td>{{ $b->harga_jual }}</td>

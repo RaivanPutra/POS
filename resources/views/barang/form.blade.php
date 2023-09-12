@@ -42,7 +42,10 @@
                                 <label for="exampleInputEmail1">Ditarik</label>
                                 <input type="Number" class="form-control" id="ditarik" value="" name="ditarik">
                                 <label for="exampleInputEmail1">User Id</label>
-                                <input type="Number" class="form-control" id="user_id" value="" name="user_id">
+                                @foreach ($user as $u)
+                                    <input type="Number" class="form-control" id="user_id"
+                                        value="{{ $u->id }}" name="user_id">
+                                @endforeach
                             </div>
                             <!-- /.card-body -->
                             <div class="card-footer">
