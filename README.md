@@ -1,1 +1,3 @@
-Tugas Sekolah Membuaut POS
+Tugas Sekolah Membuat POS
+
+git clone 
