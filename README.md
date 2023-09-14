@@ -1,3 +1,3 @@
 Tugas Sekolah Membuat POS
 
-git clone 
+git clone https://github.com/RaivanPutra/POS.git
